@@ -14,7 +14,6 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.3);
 }
 
 .hero-content {
@@ -26,3 +25,94 @@
 #hero-banner {
   height: 700px;
 }
+
+h1{
+  font-family: "cofo-raffine", sans-serif;
+font-weight: 900;
+font-style: normal;
+font-size: 150px;
+  text-align: center;
+}
+
+h2{
+  font-family: "cofo-raffine", sans-serif;
+font-weight: 900;
+font-style: normal;
+font-size: 75px;
+text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+section{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.6rem;
+}
+cite {
+  display: block;
+  font-size: small;
+  margin-block: 1rem;
+}
+hr {
+  display: block;
+  margin-block: 4rem;
+  border: 1px solid #ccc6;
+  border-width: 1px 0 0;
+}
+
+.side-by-side {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.side-by-side__text {
+  grid-column: 2;
+  margin-trim: block; /* only supported in Firefox 🥺 */
+  h3 {
+    margin-top: 0;
+  }
+}
+p, h2, h3, blockquote, hr {
+  /* animation-name: text-appear; @keyframes defined below */
+  /* animation-timing-function: ease-in; standard should be linear */
+  /* animation-fill-mode: both; keeps animated values forwards and backwards */
+  animation: text-appear ease-in both;
+  animation-timeline: view(); /* applies animation state relative to viewport */
+  animation-range: 0vh 70vh; /* set 0% and 100% positions */
+}
+img {
+  animation: image-appear ease-in both;
+  animation-timeline: view();
+  animation-range: entry 50% 100vh;
+}
+@prefers-reduced-motion {
+  p, h2, h3, blockquote, hr, img {
+    animation: none;
+  }
+}
+
+
+@keyframes image-appear {
+  from {
+    filter: saturate(0) contrast(4) brightness(.1) blur(3px);
+    opacity: 0;
+    scale: .95;
+    translate: 0 4rem;
+  }
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    translate: 0 8rem;
+  }
+}
+
