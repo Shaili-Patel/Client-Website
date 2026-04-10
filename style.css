@@ -118,6 +118,8 @@ p {
 .menu-card.pink.horizontal::before { background: #f48ca3; }
 .menu-card.yellow.horizontal::before { background: #ffd166; }
 .menu-card.mint.horizontal::before { background: #a0e8af; }
+.menu-card.brown.horizontal::before { background: #6d4a2a; }
+
 
 .menu-card.horizontal:hover::before { opacity: 0.8; }
 .menu-card.horizontal:hover { transform: translateY(-6px); }
@@ -126,12 +128,13 @@ p {
 
 /* TEXT COLOR ON HOVER */
 .menu-card.pink.horizontal:hover h3,
-.menu-card.pink.horizontal:hover .menu-desc { color: white; }
+.menu-card.pink.horizontal:hover .menu-desc { color: #333; }
 .menu-card.yellow.horizontal:hover h3,
 .menu-card.yellow.horizontal:hover .menu-desc { color: #333; }
 .menu-card.mint.horizontal:hover h3,
 .menu-card.mint.horizontal:hover .menu-desc { color: #333; }
-
+.menu-card.brown.horizontal:hover h3,
+.menu-card.brown.horizontal:hover .menu-desc { color: #333; }
 /* ORDER FORM */
 .order-card {
   background: #ffc0cb;
@@ -173,4 +176,80 @@ p {
 @media (max-width: 900px) {
   .menu-card.horizontal { flex-direction: column; align-items: flex-start; }
   .menu-card.horizontal img { width: 100%; }
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* CART CONTROLS */
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.qty-btn {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.qty {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+.add-cart-btn {
+  margin-left: auto;
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-cart-btn:hover {
+  background: #333;
+}
+
+/* CART */
+#cart {
+  background: #fff0f5;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.remove-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
 }
