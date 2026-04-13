@@ -39,11 +39,9 @@
 <!-- HERO -->
 <section id="hero-banner">
   <div class="hero-content">
-    <h1>
-      <span>Fresh</span>
-      <span>Baked</span>
-      <span>Daily</span>
-    </h1>
+    <h1>Treats By Tab</h1>
+    <p class="hero-subtitle">Freshly baked cookies made with love</p>
+    <a href="#menu" class="hero-btn">View Menu</a>
   </div>
 </section>
 
@@ -70,10 +68,10 @@
       </div>
     </div>
 
-<div class="menu-card horizontal yellow" data-name="Cookies" data-price="4">      <img src="imgs/brownbutter.png" alt="Brown Butter Cookies">
+<div class="menu-card horizontal caramel" data-name="Cookies" data-price="4">      <img src="imgs/brownbutter.png" alt="Brown Butter Cookies">
       <div class="menu-card-content">
         <h3>Brown Butter Cookies</h3>
-        <p class="menu-desc">Light vanilla cupcakes topped with creamy frosting.</p>
+        <p class="menu-desc">Nutty, caramelized brown butter cookies, golden, soft, slightly crisp</p>
 <p class="price">$<span class="base-price">4</span></p>
 <div class="cart-controls">
   <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
@@ -87,10 +85,27 @@
       </div>
     </div>
 
-    <div class="menu-card horizontal yellow" data-name="Cookies" data-price="4">      <img src="imgs/peanutbutter.webp" alt="Brown Butter Cookies">
+    <div class="menu-card horizontal brown" data-name="Cookies" data-price="4">      <img src="imgs/crinkle.png" alt="Crinkle Cookies">
+      <div class="menu-card-content">
+        <h3>Chocolate Crinkle Cookies</h3>
+        <p class="menu-desc">Soft, chocolate-rich brown crinkle cookies with a crackly sugar-dusted top.</p>
+<p class="price">$<span class="base-price">4</span></p>
+<div class="cart-controls">
+  <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+  <span class="qty">1</span>
+  <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+
+  <button class="add-cart-btn" onclick="addToCart(this, 'Cookies', 4)">
+    Add to Cart
+  </button>
+</div>
+      </div>
+    </div>
+
+    <div class="menu-card horizontal yellow" data-name="Cookies" data-price="4">      <img src="imgs/peanutbutter.webp" alt="Peanut Butter Cookies">
       <div class="menu-card-content">
         <h3>Peanut Butter Cookies</h3>
-        <p class="menu-desc">Light vanilla cupcakes topped with creamy frosting.</p>
+        <p class="menu-desc">Creamy peanut butter cookies, soft and chewy.</p>
 <p class="price">$<span class="base-price">4</span></p>
 <div class="cart-controls">
   <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
@@ -104,10 +119,10 @@
       </div>
     </div>
 
-<div class="menu-card horizontal pink" data-name="Cookies" data-price="4">      <img src="imgs/redvelvet.png" alt="Fudge Brownies">
+<div class="menu-card horizontal red" data-name="Cookies" data-price="4">      <img src="imgs/redvelvet.png" alt="Fudge Brownies">
       <div class="menu-card-content">
         <h3>Red Velvet Cookies</h3>
-        <p class="menu-desc">Rich and chocolatey brownies baked to perfection.</p>
+        <p class="menu-desc">Soft red velvet cookies, cocoa-rich, buttery, tender, chewy, vibrant</p>
 <p class="price">$<span class="base-price">4</span></p>
 <div class="cart-controls">
   <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
@@ -125,14 +140,14 @@
 
 <!-- Brownies -->
    <section id="menu" class="container my-5">
-  <h2 class="text-center mb-5">Cookies</h2>
+  <h2 class="text-center mb-5">Brownies</h2>
 
   <!-- Horizontal Cards -->
-  <div class="menu-grid-horizontal">
-<div class="menu-card horizontal brown" data-name="Brownies" data-price="4">      <img src="imgs/raspberrybrownie.png" alt="Raspberry Brownies">
+
+  <div class="menu-card horizontal pink" data-name="Cookies" data-price="4">      <img src="imgs/brownie.png" alt="Fudge Brownies">
       <div class="menu-card-content">
-        <h3>Raspberry Brownies</h3>
-        <p class="menu-desc">Classic chocolate chip cookies, golden and chewy.</p>
+        <h3>Fudge Chocolate Brownies</h3>
+        <p class="menu-desc">Rich fudgy brownies, deeply chocolatey, soft center, and crackly top.</p>
 <p class="price">$<span class="base-price">4</span></p>
 <div class="cart-controls">
   <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
@@ -145,17 +160,36 @@
 </div>
       </div>
     </div>
+  </div>
 
-<div class="menu-card horizontal pink" data-name="Cookies" data-price="4">      <img src="imgs/redvelvet.png" alt="Fudge Brownies">
+      <div class="menu-card horizontal pink" data-name="Cookies" data-price="4">      <img src="imgs/cinnamon.png" alt="Fudge Brownies">
       <div class="menu-card-content">
-        <h3>Red Velvet Cookies</h3>
-        <p class="menu-desc">Rich and chocolatey brownies baked to perfection.</p>
+        <h3>Cinnamon Apple Blondies</h3>
+        <p class="menu-desc">Warm cinnamon apple blondies, soft and chewy with sweet spiced apple flavor</p>
 <p class="price">$<span class="base-price">4</span></p>
 <div class="cart-controls">
   <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
   <span class="qty">1</span>
   <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
 
+  <button class="add-cart-btn" onclick="addToCart(this, 'Cookies', 4)">
+    Add to Cart
+  </button>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-grid-horizontal">
+<div class="menu-card horizontal red" data-name="Brownies" data-price="4">      <img src="imgs/raspberrybrownie.png" alt="Raspberry Brownies">
+      <div class="menu-card-content">
+        <h3>Raspberry Brownies</h3>
+        <p class="menu-desc">Fudgy chocolate brownies with sweet, tart raspberry swirls</p>
+<p class="price">$<span class="base-price">4</span></p>
+<div class="cart-controls">
+  <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+  <span class="qty">1</span>
+  <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
   <button class="add-cart-btn" onclick="addToCart(this, 'Cookies', 4)">
     Add to Cart
   </button>
@@ -165,35 +199,77 @@
   </div>
 </section>
 
-<!-- Vertical Cards -->
-  <div class="menu-grid">
-    <div class="menu-card brown">
-      <img src="https://picsum.photos/seed/1/500/400" alt="Cookies">
-      <div class="menu-card-content">
-        <h3>Cookies</h3>
-        <p class="menu-subtitle">Soft, chewy, and packed with chocolate goodness.</p>
-        <p class="menu-desc">Fresh baked daily with rich chocolate, soft centers, and that perfect golden edge.</p>
-      </div>
-    </div>
+<!-- Seasonal -->
+   <section id="menu" class="container my-5">
+  <h2 class="text-center mb-5">Seasonal</h2>
 
-    <div class="menu-card yellow">
-      <img src="https://picsum.photos/seed/2/500/400" alt="Cupcakes">
-      <div class="menu-card-content">
-        <h3>Cupcakes</h3>
-        <p class="menu-subtitle">Light, fluffy, and topped with creamy buttercream.</p>
-        <p class="menu-desc">Customizable flavors to make every bite special.</p>
-      </div>
-    </div>
+  <!-- Horizontal Cards -->
 
-    <div class="menu-card mint">
-      <img src="https://picsum.photos/seed/3/500/400" alt="Brownies">
+ <div class="menu-card horizontal brown" data-name="Cookies" data-price="4">      <img src="imgs/cocoa.png" alt="Crinkle Cookies">
       <div class="menu-card-content">
-        <h3>Brownies</h3>
-        <p class="menu-subtitle">Rich, fudgy, and irresistible.</p>
-        <p class="menu-desc">Perfectly baked with premium cocoa for a melt-in-your-mouth experience.</p>
+        <h3>Hot Cocoa Cookies</h3>
+        <p class="menu-desc">Soft chocolate cookies with cozy hot cocoa flavor, rich, sweet, and melty</p>
+<p class="price">$<span class="base-price">4</span></p>
+<div class="cart-controls">
+  <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+  <span class="qty">1</span>
+  <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+
+  <button class="add-cart-btn" onclick="addToCart(this, 'Cookies', 4)">
+    Add to Cart
+  </button>
+</div>
+      </div>
+    </div>  
+
+
+  <div class="menu-grid-horizontal">
+<div class="menu-card horizontal red" data-name="Brownies" data-price="4">      <img src="imgs/raspberrybrownie.png" alt="Raspberry Brownies">
+      <div class="menu-card-content">
+        <h3>Raspberry Brownies</h3>
+        <p class="menu-desc">Fudgy chocolate brownies with sweet, tart raspberry swirls</p>
+<p class="price">$<span class="base-price">4</span></p>
+<div class="cart-controls">
+  <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+  <span class="qty">1</span>
+  <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+  <button class="add-cart-btn" onclick="addToCart(this, 'Cookies', 4)">
+    Add to Cart
+  </button>
+</div>
       </div>
     </div>
   </div>
+</section>
+
+<!-- Coming Soon -->
+ <section id="coming-soon" class="container my-5">
+  <h2 class="text-center mb-5">Coming Soon</h2>
+
+  <div class="menu-grid-horizontal">
+
+    <div class="menu-card horizontal coming-soon">
+      <img src="imgs/duabi.png" alt="Coming Soon Item">
+
+      <div class="menu-card-content">
+        <h3>Dubai Brownie</h3>
+        <p class="menu-desc">Rich chocolate brownies filled with crunchy, pistachio-kataifi inspired sweetness.</p>
+        <p class="coming-text">Baking soon</p>
+      </div>
+    </div>
+
+    <div class="menu-card horizontal coming-soon">
+      <img src="imgs/brookie.png" alt="Coming Soon Item">
+
+      <div class="menu-card-content">
+        <h3>Brookies</h3>
+        <p class="menu-desc">Fudgy brownies layered with soft, chewy cookie dough.</p>
+        <p class="coming-text"> Baking soon</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer class="site-footer">

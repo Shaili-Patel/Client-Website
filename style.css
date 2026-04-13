@@ -43,7 +43,7 @@ p {
 
 #hero-banner h1 {
   font-family: "cofo-raffine", sans-serif;
-  font-size: 200px;
+  font-size: 180px;
   font-weight: 900;
   text-align: center;
 }
@@ -116,10 +116,11 @@ p {
 }
 
 .menu-card.pink.horizontal::before { background: #f48ca3; }
-.menu-card.yellow.horizontal::before { background: #ffd166; }
+.menu-card.yellow.horizontal::before { background: #ffd981; }
 .menu-card.mint.horizontal::before { background: #a0e8af; }
 .menu-card.brown.horizontal::before { background: #6d4a2a; }
-
+.menu-card.caramel.horizontal::before { background: #c98d54; }
+.menu-card.red.horizontal::before { background: #bb2f2a; }
 
 .menu-card.horizontal:hover::before { opacity: 0.8; }
 .menu-card.horizontal:hover { transform: translateY(-6px); }
@@ -135,6 +136,26 @@ p {
 .menu-card.mint.horizontal:hover .menu-desc { color: #333; }
 .menu-card.brown.horizontal:hover h3,
 .menu-card.brown.horizontal:hover .menu-desc { color: #333; }
+.menu-card.caramel.horizontal:hover h3,
+.menu-card.caramel.horizontal:hover .menu-desc { color: #333; }
+.menu-card.red.horizontal:hover h3,
+.menu-card.red.horizontal:hover .menu-desc { color: #333; }
+
+.menu-card.horizontal {
+  display: flex;
+  align-items: stretch; /* key fix */
+}
+
+.menu-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.cart-controls {
+  margin-top: auto; /* pushes it to the bottom */
+}
 /* ORDER FORM */
 .order-card {
   background: #ffc0cb;
@@ -199,6 +220,16 @@ p {
   width: 32px;
   height: 32px;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: #ff409c;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.qty-btn:active {
+  transform: scale(0.95);
 }
 
 .qty {
@@ -208,17 +239,21 @@ p {
 }
 
 .add-cart-btn {
-  margin-left: auto;
-  background: black;
+  background: #ff69b4;
   color: white;
   border: none;
   padding: 8px 14px;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.2s ease;
+   margin-left: auto;
+  margin-right: 100px;
+  
 }
 
 .add-cart-btn:hover {
-  background: #333;
+  background: #ff409c; /* stronger pink */
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* CART */
@@ -252,4 +287,65 @@ p {
   font-weight: bold;
   text-align: right;
   margin-top: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+#hero-banner {
+  width: 100%;
+  height: 500px;
+  background: url('imgs/background1.gif') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+#hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #f8f8f8;
+}
+
+.hero-btn {
+  background: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.hero-btn:hover {
+  background: #ff2f92;
+  transform: translateY(-2px);
+}
+
+.menu-card.coming-soon {
+  opacity: 0.75;
+  border: 2px dashed #ff69b4;
+  background: #fff7fa;
+}
+
+.coming-text {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #ff69b4;
+}
+
+/* optional: disable hover lift */
+.menu-card.coming-soon:hover {
+  transform: none;
 }
