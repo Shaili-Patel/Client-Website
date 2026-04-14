@@ -141,11 +141,6 @@ p {
 .menu-card.red.horizontal:hover h3,
 .menu-card.red.horizontal:hover .menu-desc { color: #333; }
 
-.menu-card.horizontal {
-  display: flex;
-  align-items: stretch; /* key fix */
-}
-
 .menu-card-content {
   display: flex;
   flex-direction: column;
@@ -202,6 +197,7 @@ p {
 .price {
   font-weight: bold;
   margin-top: 10px;
+  color: black;
 }
 
 /* CART CONTROLS */
@@ -348,4 +344,111 @@ p {
 /* optional: disable hover lift */
 .menu-card.coming-soon:hover {
   transform: none;
+}
+
+.gf-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #ffe3ec;
+  color: #d63384;
+  width: fit-content;
+  transition: 0.2s ease;
+}
+
+.gf-badge:hover {
+  background: #ffd1e0;
+}
+
+.gf-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.gf-checkbox {
+  accent-color: #d63384;
+  transform: scale(1.1);
+}
+
+.gf-text {
+  color: #444;
+}
+
+/* CART PAGE */
+#cart {
+  background: #fff0f5;
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 80px auto;
+}
+
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+.cart-item button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background: #ff2f92;
+}
+
+.cart-card {
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-card img {
+  width: 250px;
+  border-radius: 15px;
+  object-fit: cover;
 }
