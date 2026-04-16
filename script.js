@@ -31,8 +31,11 @@ function saveCart(cart) {
 // ========================
 // ADD TO CART (MERGE SAME ITEM)
 // ========================
-function addToCart(btn, name, price) {
+function addToCart(btn) {
   const card = btn.closest(".menu-card");
+
+  const name = card.dataset.name;
+  const price = parseFloat(card.dataset.price);
   const qty = parseInt(card.querySelector(".qty").innerText);
   const image = card.querySelector("img")?.src || "";
 
@@ -126,6 +129,17 @@ function renderCart() {
   const cart = getCart();
 
   container.innerHTML = "";
+  if (cart.length === 0) {
+  container.innerHTML = `
+    <div class="empty-cart">
+      <h3>Your cart is empty 🧁</h3>
+      <p>Go add some cookies to get started!</p>
+    </div>
+  `;
+
+  totalEl.innerText = "Total: $0";
+  return;
+}
 
   let total = 0;
 
@@ -140,7 +154,10 @@ function renderCart() {
       <img src="${item.image}" alt="${item.name}">
 
       <div class="menu-card-content">
-        <h3>${item.name}</h3>
+       <h3>
+  ${item.name.replace(" (Gluten-Free)", "")}
+  ${item.glutenFree ? '<span class="gf-badge">Gluten-Free</span>' : ''}
+</h3>
 
         <p class="price">$${item.price} each</p>
 
@@ -164,4 +181,55 @@ function renderCart() {
   });
 
   totalEl.innerText = "Total: $" + total;
+}
+
+function addToCart(btn) {
+  const card = btn.closest(".menu-card");
+
+  const baseName = card.dataset.name;
+  const price = parseFloat(card.dataset.price);
+  const qty = parseInt(card.querySelector(".qty").innerText);
+  const image = card.querySelector("img")?.src || "";
+
+  // ✅ NEW: check gluten-free toggle
+  const gfChecked = card.querySelector(".gf-checkbox")?.checked;
+
+  // modify name if GF
+  const name = gfChecked ? baseName + " (Gluten-Free)" : baseName;
+
+  let cart = getCart();
+
+  // ✅ IMPORTANT: match BOTH name + gf status
+  const existing = cart.find(item => item.name === name);
+
+  if (existing) {
+    existing.quantity += qty;
+  } else {
+    cart.push({
+      name,
+      price,
+      quantity: qty,
+      image,
+      glutenFree: gfChecked // optional but useful
+    });
+  }
+
+  saveCart(cart);
+
+  card.querySelector(".qty").innerText = 1;
+
+  // optional: reset checkbox after adding
+  if (card.querySelector(".gf-checkbox")) {
+    card.querySelector(".gf-checkbox").checked = false;
+  }
+}
+
+function saveOrderNote() {
+  const note = document.getElementById("order-note")?.value || "";
+  localStorage.setItem("orderNote", note);
+}
+
+const noteEl = document.getElementById("order-note");
+if (noteEl) {
+  noteEl.value = localStorage.getItem("orderNote") || "";
 }

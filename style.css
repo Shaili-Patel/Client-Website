@@ -4,7 +4,7 @@ body {
   background-color: #ffeef1;
   margin: 0;
   scroll-behavior: smooth;
-}
+} 
 
 h2, h3, h4 {
   font-family: "cofo-raffine", sans-serif;
@@ -341,7 +341,6 @@ p {
   color: #ff69b4;
 }
 
-/* optional: disable hover lift */
 .menu-card.coming-soon:hover {
   transform: none;
 }
@@ -356,6 +355,11 @@ p {
   width: fit-content;
   transition: 0.2s ease;
 }
+/* Gluten free in the cart */
+.cart-card .gf-badge {
+  font-size: 16px;
+}
+/* Gluten free toggle */
 
 .gf-badge:hover {
   background: #ffd1e0;
@@ -451,4 +455,75 @@ p {
   width: 250px;
   border-radius: 15px;
   object-fit: cover;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 60px 20px;
+  color: #777;
+}
+
+.empty-cart h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.empty-cart p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.empty-cart h3 {
+  font-size: 24px;
+}
+
+.empty-cart {
+  background: #fff8f2;
+  border: 2px dashed #f3c6d2;
+  border-radius: 12px;
+}
+
+.order-notes {
+  margin: 20px 0;
+}
+
+.order-notes label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.order-notes textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+
+  border-radius: 10px;
+  border: 1px solid #ddd;
+
+  font-size: 14px;
+  resize: vertical;
+}
+
+.order-notes {
+  margin-top: 70px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.site-footer {
+  margin-top: auto;
 }

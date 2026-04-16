@@ -38,10 +38,15 @@
 </nav>
 
 <section id="cart">
-  <h2 class="text-center">Your Cart</h2>
+  <h2 class="text-center">Cart</h2>
 
   <div id="cart-items"></div>
-
+<div class="order-notes">
+  <label for="order-note">Anything you'd like us to know?</label>
+  <textarea id="order-note"
+  placeholder="Birthday, allergies, message on box, etc..."
+  oninput="saveOrderNote()"></textarea>
+</div>
   <div class="total" id="cart-total">Total: $0</div>
 
   <button class="checkout-btn">Checkout</button>
