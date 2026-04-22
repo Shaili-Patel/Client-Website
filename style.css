@@ -35,17 +35,6 @@ p {
   font-size: 15px;
 }
 
-/* HERO */
-#hero-banner {
-  width: 100%;
-  height: 700px;
-  background: url('imgs/background1.gif') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
 #hero-banner h1 {
   font-family: "cofo-raffine", sans-serif;
   font-size: 180px;
@@ -155,7 +144,7 @@ p {
 }
 
 .cart-controls {
-  margin-top: auto; /* pushes it to the bottom */
+  margin-top: auto;
 }
 /* ORDER FORM */
 .order-card {
@@ -257,7 +246,7 @@ p {
 }
 
 .add-cart-btn:hover {
-  background: #ff409c; /* stronger pink */
+  background: #ff409c; 
   transform: translateY(-2px) scale(1.05);
 }
 
@@ -267,8 +256,8 @@ p {
   padding: 60px 40px;
   border-radius: 20px;
 
-  max-width: 1000px;   /* wider */
-  width: 95%;          /* allows breathing room */
+  max-width: 1000px;   
+  width: 95%;       
   margin: 80px auto;
 }
 
@@ -285,7 +274,7 @@ p {
 .cart-card .remove-btn {
   height: fit-content;
   align-self: center;
-  padding: 8px 12px; /* optional: better sizing */
+  padding: 8px 12px; 
 }
 
 .remove-btn {
@@ -312,7 +301,7 @@ p {
 
 #hero-banner {
   width: 100%;
-  height: 500px;
+  min-height: 600px;
   background: url('imgs/background1.gif') center/cover no-repeat;
   display: flex;
   justify-content: center;
@@ -537,7 +526,14 @@ main {
   flex: 1;
 }
 
+.navbar {
+  position: relative;
+}
 
+.nav-logo {
+  height: 40px;
+  width: auto;
+}
 
 
 
