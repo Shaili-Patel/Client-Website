@@ -264,8 +264,12 @@ p {
 /* CART */
 #cart {
   background: #fff0f5;
-  padding: 40px 20px;
+  padding: 60px 40px;
   border-radius: 20px;
+
+  max-width: 1000px;   /* wider */
+  width: 95%;          /* allows breathing room */
+  margin: 80px auto;
 }
 
 .cart-item {
@@ -276,6 +280,12 @@ p {
   padding: 15px;
   border-radius: 12px;
   margin-bottom: 10px;
+}
+
+.cart-card .remove-btn {
+  height: fit-content;
+  align-self: center;
+  padding: 8px 12px; /* optional: better sizing */
 }
 
 .remove-btn {
@@ -422,8 +432,8 @@ p {
   color: white;
   border: none;
   padding: 4px 10px;
-  height: fit-content; /* ADD THIS */
-  align-self: center;  /* ADD THIS */
+  height: fit-content;
+  align-self: center;  
 }
 
 .total {
@@ -526,6 +536,8 @@ html, body {
 main {
   flex: 1;
 }
+
+
 
 
 
